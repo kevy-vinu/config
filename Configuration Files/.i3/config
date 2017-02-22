@@ -92,42 +92,42 @@ bindsym $mod+a focus parent
 
 
 # switch to workspace
-bindsym $mod+1 workspace $w1 
-bindsym $mod+2 workspace $w2
-bindsym $mod+3 workspace $w3
-bindsym $mod+4 workspace $w4
-bindsym $mod+5 workspace $w5
-bindsym $mod+6 workspace $w6
-bindsym $mod+7 workspace $w7
-bindsym $mod+8 workspace $w8
-bindsym $mod+9 workspace $w9
-bindsym $mod+0 workspace $w10
+bindsym $mod+1 workspace 1 
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $w1
-bindsym $mod+Shift+2 move container to workspace $w2
-bindsym $mod+Shift+3 move container to workspace $w3
-bindsym $mod+Shift+4 move container to workspace $w4
-bindsym $mod+Shift+5 move container to workspace $w5
-bindsym $mod+Shift+6 move container to workspace $w6
-bindsym $mod+Shift+7 move container to workspace $w7
-bindsym $mod+Shift+8 move container to workspace $w8
-bindsym $mod+Shift+9 move container to workspace $w9
-bindsym $mod+Shift+0 move container to workspace $w10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 
-assign [class="Firefox"] $w2
-assign [class="VirtualBox*"] $w9
+assign [class="Firefox"] 2
+assign [class="VirtualBox*"] 9
 
-set $w1 " Terminal"
-set $w2 " Firefox"
-set $w3 "Three"
-set $w4 "Four"
-set $w5 "Five"
-set $w6 "Six"
-set $w7 "Seven"
-set $w8 "Eight"
-set $w9 " VirtualBox"
-set $w10 "Ten"
+#set 1 " Terminal"
+#set 2 " Firefox"
+#set 3 "Three"
+#set 4 "Four"
+#set 5 "Five"
+#set 6 "Six"
+#set 7 "Seven"
+#set 8 "Eight"
+#set 9 " VirtualBox"
+#set 10 "Ten"
 
 
 # reload the configuration file
@@ -172,3 +172,4 @@ bar {
 exec_always xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1280x800 --pos 0x0 --rotate normal --output TV1 --off --output VGA1 --off
 exec_always compton
 exec_always feh --bg-scale /home/kevy/Pictures/mac_os_x_default_wallpaper_by_djeos546-d3b6v3k.jpg
+exec_always /usr/lib/i386-linux-gnu/notify-osd
