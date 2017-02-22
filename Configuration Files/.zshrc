@@ -9,7 +9,7 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 
-ZSH_THEME="fwalch"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

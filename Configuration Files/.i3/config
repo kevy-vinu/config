@@ -115,8 +115,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-assign [class="Firefox"] 2
-assign [class="VirtualBox*"] 9
+#assign [class="Firefox"] 2
+#assign [class="VirtualBox*"] 9
 
 #set 1 " Terminal"
 #set 2 " Firefox"
@@ -171,5 +171,5 @@ bar {
 
 exec_always xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1280x800 --pos 0x0 --rotate normal --output TV1 --off --output VGA1 --off
 exec_always compton
-exec_always feh --bg-scale /home/kevy/Pictures/mac_os_x_default_wallpaper_by_djeos546-d3b6v3k.jpg
+exec_always feh --bg-scale /home/kevy/Pictures/treugolniki-raznocvetnye.jpg
 exec_always /usr/lib/i386-linux-gnu/notify-osd
