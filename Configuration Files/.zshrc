@@ -85,4 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-startx
+
+if [ -z "$DISPLAY" ]; then
+    startx
+fi
