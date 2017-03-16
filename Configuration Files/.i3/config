@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run
 
 #rofi
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 12"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 1 -width 100 -padding 500 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 12"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -178,6 +178,6 @@ bar {
 }
 
 exec_always xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1280x800 --pos 0x0 --rotate normal --output TV1 --off --output VGA1 --off
-exec_always compton
+exec_always --no-startup-id compton -f
 exec_always feh --bg-scale /home/kevy/Pictures/screenpaper-ru-1028.jpg
 exec_always /usr/lib/i386-linux-gnu/notify-osd
