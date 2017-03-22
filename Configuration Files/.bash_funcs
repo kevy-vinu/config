@@ -28,3 +28,8 @@ done
 MagPi_Magazine_Downloader () {
 wget -c -r -A.pdf -np -nd -l1 -erobots=off https://www.raspberrypi.org/magpi-issues
 }
+
+dracarys () {
+mutt -s "Nothing" kevy.vinu@gmail.com < $1
+}
+
