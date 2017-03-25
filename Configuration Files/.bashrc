@@ -144,7 +144,7 @@ alias shutdown='sudo shutdown -P now'
 
 PS1='\n${debian_chroot:+($debian_chroot)}┌─[$(tput bold)$(tput setaf 1)\t$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\$$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\w$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)Ubuntu$(tput sgr 0)]\n└─────[\!] '
 
-date;echo "What can I help you with, line?";
+date;echo "What can I help you with, kevy?";
 
 cfu () { wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed -n '2,4p'
 }

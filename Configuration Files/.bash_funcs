@@ -20,12 +20,14 @@ youtube-dl -f 140 "ytsearch:$1 $2 $3 $4 $5 $6 $7 $8 $9"
 }
 
 LinuxVoice_Magazine_Downloader () {
+cd /home/kevy/Learn\ Linux/LinuxVoice/;
 for i in {001..050}; 
 do wget --read-timeout=5 --tries=0 -c https://www.linuxvoice.com/issues/$i/Linux-Voice-Issue-$i.pdf; 
 done
 }
 
 MagPi_Magazine_Downloader () {
+cd /home/kevy/Learn\ Linux/MagPi/;
 wget -c -r -A.pdf -np -nd -l1 -erobots=off https://www.raspberrypi.org/magpi-issues
 }
 

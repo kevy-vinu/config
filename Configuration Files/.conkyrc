@@ -70,7 +70,7 @@ TEXT
         "full_text": " IP: ${if_up ppp0}${addr ppp0}${endif} "
     },
     {
-        "full_text": " D: ${downspeed ppp0}/s U: ${upspeed ppp0}/s T: ${totaldown ppp0}"
+        "full_text": " D: ${downspeed eth0}/s U: ${upspeed eth0}/s T: ${totaldown eth0}"
     },
     {
         "full_text": " CPU: ${cpu cpu0}% ",
