@@ -1,0 +1,17 @@
+session = ~/.rtorrent.session
+
+directory = ~/Torrentz/Downloads
+
+schedule = watch_directory,5,5,load_start=~/Torrentz/Torrents/*.torrent
+schedule = untied_directory,5,5,stop_untied=
+schedule = tied_directory,5,5,start_tied=
+
+#port_range = 49164-49164
+
+#encryption = require,require_RC4,allow_incoming,try_outgoing
+
+#dht = auto
+#dht_port = 6881
+#peer_exchange = yes
+
+
