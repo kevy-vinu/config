@@ -91,10 +91,10 @@ TEXT
             ${endif} 
     },
     {
-        "full_text": " Temp: ${exec sensors | grep 'Core' | cut -f9 -d" " } "
+        "full_text": " TEMP: ${exec sensors | grep 'Core' | cut -f9 -d" " } "
     },
     {
-        "full_text": " Up: ${uptime_short} "
+        "full_text": " UP: ${uptime_short} "
     },
     {
         "full_text": " C ",
@@ -111,10 +111,10 @@ TEXT
             ${endif}
     },
     {
-        "full_text": " Vol: ${exec amixer sget 'Master' | grep 'Mono:' | cut -c22-24 | sed '/^$/d'} "
+        "full_text": " VOL: ${exec amixer sget 'Master' | grep 'Mono:' | cut -c22-24 | sed '/^$/d'} "
     },
     {
-        "full_text": " ${time %a %d/%m/%y} ${time %H:%M:%S} ",
+        "full_text": " ${time %a %d.%m.%y} ${time %H:%M:%S} ",
         "color": ${if_match ${time %u}>5}"\#00CC00"${else}"\#CC0000"${endif}
     }
 ],
