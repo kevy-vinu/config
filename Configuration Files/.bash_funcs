@@ -23,15 +23,16 @@ LinuxVoice_Magazine_Downloader () {
 cd /home/kevy/Learn\ Linux/LinuxVoice/;
 for i in {001..050}; 
 do wget --read-timeout=5 --tries=0 -c https://www.linuxvoice.com/issues/$i/Linux-Voice-Issue-$i.pdf; 
-done
+done;
+cd
 }
 
 MagPi_Magazine_Downloader () {
 cd /home/kevy/Learn\ Linux/MagPi/;
-wget -c -r -A.pdf -np -nd -l1 -erobots=off https://www.raspberrypi.org/magpi-issues
+wget -c -r -A.pdf -np -nd -l1 -erobots=off https://www.raspberrypi.org/magpi-issues;
+cd
 }
 
-dracarys () {
-mutt -s "Nothing" kevy.vinu@gmail.com < $1
+clean-history () {
+awk '!seen[$0]++' .bash_history > history && rm -v .bash_history && mv -v history .bash_history
 }
-

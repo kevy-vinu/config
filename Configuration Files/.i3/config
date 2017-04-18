@@ -183,5 +183,5 @@ bar {
 
 exec_always xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1280x800 --pos 0x0 --rotate normal --output TV1 --off --output VGA1 --off
 exec_always --no-startup-id compton -f
-exec_always feh --bg-scale /home/kevy/Pictures/screenpaper-ru-1028.jpg
+exec_always feh --bg-scale /home/kevy/Downloads/HQUneMR.jpg 
 exec_always /usr/lib/i386-linux-gnu/notify-osd

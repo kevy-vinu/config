@@ -140,9 +140,16 @@ alias hibernate='nmcli nm enable false && sudo pm-hibernate'
 
 alias shutdown='sudo shutdown -P now'
 
+echo "Daily Notes"
+echo "-----------"
+echo
+cat /home/kevy/.note
+echo
+echo ">>EOF<<"
+echo
 # style
 
-PS1='\n${debian_chroot:+($debian_chroot)}┌─[$(tput bold)$(tput setaf 1)\t$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\$$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\w$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)Ubuntu$(tput sgr 0)]\n└─────[\!] '
+PS1='\n${debian_chroot:+($debian_chroot)}┌─[$(tput bold)$(tput setaf 1)\t$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\$$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\w$(tput sgr 0)]─[$(tput bold)$(tput setaf 1)\u$(tput sgr 0)]\n└─────[\!] '
 
 date;echo "What can I help you with, kevy?";
 
