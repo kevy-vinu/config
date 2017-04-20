@@ -37,8 +37,7 @@ clean-history () {
 awk '!seen[$0]++' .bash_history > history && rm -v .bash_history && mv -v history .bash_history
 }
 
-cfu () { wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed -n '2,4p' | tee ~/.cfu; 
-echo
+cfu () { wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed -n '/AD/!p' | sed -n '/commandlinefu.com/!p' | tee ~/.cfu; 
 read -p "Do you want to save? (y/n) " ans
 if [ $ans == y ]
 then
