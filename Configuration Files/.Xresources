@@ -1,4 +1,6 @@
+
 XTerm*locale: true
+XTerm*utf8: 1
 XTerm*selectToClipboard: true
 XTerm*SaveLines: 9000
 XTerm*ScrollBar: false
