@@ -6,8 +6,8 @@ schedule = watch_directory,5,5,load_start=~/Torrentz/Torrents/*.torrent
 schedule = untied_directory,5,5,stop_untied=
 schedule = tied_directory,5,5,start_tied=
 
-#port_range = 49164-49164
-
+#port_range = 51103-51103
+#port_random = yes
 #encryption = require,require_RC4,allow_incoming,try_outgoing
 
 #dht = auto
