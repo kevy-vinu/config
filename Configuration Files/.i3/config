@@ -43,7 +43,7 @@ bindsym $mod+d exec rofi -show run
 
 
 bindsym $mod+o exec xdg-open "$(locate home | rofi -dmenu -i -p "locate:")"
-bindsym $mod+p exec xdg-open "$(find $HOME/Movies $HOME/Torrentz $HOME/Videos -type f -size +10M | rofi -dmenu -i -p "Play:")"
+bindsym $mod+p exec xdg-open "$(find $HOME/Movies $HOME/Torrentz $HOME/Videos $HOME/Learn\ Linux -type f -size +10M | rofi -dmenu -i -p "Play:")"
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
