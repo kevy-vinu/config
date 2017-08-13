@@ -1,0 +1,20 @@
+#!/bin/bash
+sleep 30s;
+date &> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+rfkill list &>> /etc/StartupScript.log;
+rfkill unblock all &>> /etc/StartupScript.log || echo "rfkill: FAILED";
+rfkill list &>> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+ifconfig &>> /etc/StartupScript.log;
+ifconfig wlan0 up &>> /etc/StartupScript.log || echo "wlan0: FAILED";
+ifconfig &>> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+vboxmanage startvm "Ubuntu" --type headless &>> /etc/StartupScript.log;
+vboxmanage controlvm "Ubuntu" poweroff &>> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+bash /etc/iptables.all &>> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+service hostapd restart &>> /etc/StartupScript.log;
+echo &>>/etc/StartupScript.log;
+service dnsmasq restart &>> /etc/StartupScript.log;
