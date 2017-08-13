@@ -1,0 +1,9 @@
+iptables -t nat -A POSTROUTING -o ppp0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -i wlan0 -o ppp0 -j ACCEPT
+iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+iptables -A FORWARD -i vboxnet0 -o ppp0 -j ACCEPT
+iptables -A FORWARD -i vboxnet0 -o eth0 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -s 127.0.0.1 -j ACCEPT
+iptables -A INPUT -p tcp --destination-port 80 -j DROP
